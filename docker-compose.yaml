@@ -1,0 +1,27 @@
+version: "3.8"
+services:
+  nifi:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: nifi01
+    ports:
+      - 8080:8080
+    environment:
+      - NIFI_WEB_HTTP_PORT=8080
+    volumes:
+      - ./nifi/database_repository:/opt/nifi/nifi-current/database_repository
+      - ./nifi/flowfile_repository:/opt/nifi/nifi-current/flowfile_repository
+      - ./nifi/content_repository:/opt/nifi/nifi-current/content_repository
+      - ./nifi/provenance_repository:/opt/nifi/nifi-current/provenance_repository
+      - ./nifi/state:/opt/nifi/nifi-current/state
+      - ./nifi/logs:/opt/nifi/nifi-current/logs
+      - ./nifi/lib:/opt/nifi/lib
+      # Remover o comentário da linha abaixo após copiar o conteúdo da pasta conf para o volume mapeado
+      # - ./nifi/conf:/opt/nifi/nifi-currents/conf
+      # - ./nifi/drivers:/opt/nifi/drivers
+    networks:
+      - treinamento
+networks:
+  treinamento:
+    driver: bridge

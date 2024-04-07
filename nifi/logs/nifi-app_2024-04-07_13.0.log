@@ -1,0 +1,5 @@
+2024-04-07 13:13:50,207 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2024-04-07 13:13:50,215 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 88 records in 0 milliseconds
+2024-04-07 13:14:08,037 INFO [Write-Ahead Local State Provider Maintenance] org.wali.MinimalLockingWriteAheadLog org.wali.MinimalLockingWriteAheadLog@298734a9 checkpointed with 6 Records and 0 Swap Files in 73 milliseconds (Stop-the-world time = 38 milliseconds, Clear Edit Logs time = 27 millis), max Transaction ID 34
+2024-04-07 13:14:10,219 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2024-04-07 13:14:10,220 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 88 records in 0 milliseconds
